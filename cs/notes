@@ -1,0 +1,6 @@
+Timing for extraLargeArray:  Timing for largeArray:  Timing for mediumArray:  Timing for smallArray:  Timing for tinyArray:
+Insert: 897.4589 ms          Insert: 8.8655 ms       Insert: 178.9 μs         Insert: 50.5 μs         Insert: 86 μs
+Append: 3.5569 ms            Append: 695 μs          Append: 152.2 μs         Append: 110.8 μs        Append: 142.8 μs
+
+
+For the append function it scales up but it has a nice slow incline where the Insert functions starts out faster than the append but jumps up in runtime as the array gets bigger. The append function scales much better than the insert function. You can tell because as the array get bigger the runtime for the insert function jumps up dramatically but, for the append function as the array gets bigger the runtime increases but not as dramatically. The reason that the Insert function is so slow is because of what the computer has to do when completing .unshift. When the new number is being added it is put into the front of the array and then every single item in the array needs to be reasigned with a new index. 
